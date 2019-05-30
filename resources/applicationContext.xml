@@ -51,8 +51,9 @@
         </tx:attributes>
     </tx:advice>
 
-    <!--配置AOP增强-->
+    <!--配置AOP增强，关联通知-->
     <aop:config>
+
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.dong.service.Imp.*ServiceImpl.*(..))"/>
     </aop:config>
 
